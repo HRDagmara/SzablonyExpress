@@ -1,0 +1,27 @@
+doctype html 
+html
+    head
+        title="LinkedIn App"
+    body
+        p Aplikacja LinkedIn ułatwia nawiązanie kontaktów z osobami i tym, co ma znaczenie w Twoim świecie zawodowym. Zbuduj i rozwiń swoją profesjonalną sieć, bądź na bieżąco z najnowszymi wiadomościami z biznesu i branży i znajdź kolejną wymarzoną pracę.
+            form(action="http://localhost:3000/useform", method="GET")
+                if(user)
+                    h1 Hi, #{user.name}
+                else
+                    p Logowanie za pomocą konta Google:
+                    p Login:
+                        input(type="text", name="login", required="", value="")
+                    p Hasło:
+                        input(type="text", name="password", required="", value="")
+                        input(type="submit", value="Submit")
+
+
+    
+doctype html
+html
+    head
+        title Zaloguj się
+    body
+        h1 Zaloguj się
+        a(href="/auth/google")
+          button Zaloguj się przez Google
